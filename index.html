@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PlantWallK COST Action CA24116 — European network advancing plant cell wall research through integrated methods, data analysis, and modelling.">
+  <title>PlantWallK · COST Action CA24116</title>
+
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/themes.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/map.css">
+</head>
+
+<body>
+  <div class="skip-links">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <a href="#nav" class="skip-link">Skip to navigation</a>
+  </div>
+
+  <div id="bg-canvas" class="bg-canvas" aria-hidden="true">
+    <div class="bg-layer bg-layer--a"></div>
+    <div class="bg-layer bg-layer--b"></div>
+    <div class="bg-canvas__overlay"></div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar" id="nav">
+      <div class="sidebar__header">
+        <a href="#home" class="site-logo">
+          <div class="site-logo__img">
+            <img src="./images/logo.svg" alt="PlantWallK" width="160" height="160">
+          </div>
+        </a>
+
+        <a href="https://www.cost.eu/actions/CA24116/" target="_blank" rel="noopener noreferrer" class="cost-cta">
+          Official COST Action page ↗
+        </a>
+
+        <nav class="sidebar__socials" aria-label="PlantWallK social links">
+          <a class="site-footer__social" href="https://bsky.app/profile/plantwallk.org" target="_blank" rel="noopener noreferrer" aria-label="PlantWallK on BlueSky">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.2 3.6C8.4 5.2 10.8 8.4 12 10.3C13.2 8.4 15.6 5.2 17.8 3.6C19.4 2.5 22 1.6 22 4.4C22 5 21.7 9.1 21.5 9.8C20.8 12.2 18.2 12.8 15.8 12.4C20 13.1 21.1 15.5 18.8 17.9C14.4 22.4 12.5 16.8 12 15.3C11.9 15 11.8 14.9 12 15.3C11.5 16.8 9.6 22.4 5.2 17.9C2.9 15.5 4 13.1 8.2 12.4C5.8 12.8 3.2 12.2 2.5 9.8C2.3 9.1 2 5 2 4.4C2 1.6 4.6 2.5 6.2 3.6Z" fill="currentColor"/></svg>
+          </a>
+          <a class="site-footer__social" href="https://www.instagram.com/plantwallk/" target="_blank" rel="noopener noreferrer" aria-label="PlantWallK on Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/><path d="M12 16.2a4.2 4.2 0 1 0 0-8.4a4.2 4.2 0 0 0 0 8.4Z" stroke="currentColor" stroke-width="2"/><path d="M17.4 6.6h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </a>
+          <a class="site-footer__social" href="https://www.linkedin.com/company/plant-wallk/" target="_blank" rel="noopener noreferrer" aria-label="PlantWallK on LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 9.5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 6.2h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M10.2 19v-5.4c0-1.9 1.1-3.2 3-3.2c1.8 0 2.6 1.3 2.6 3.2V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10.2 9.5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </a>
+        </nav>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link nav-link--active">Home</a></li>
+          <li><a href="#learn-more" class="nav-link">Learn more</a></li>
+          <li><a href="#working-groups" class="nav-link">Working Groups</a></li>
+          <li><a href="#leadership" class="nav-link">Leadership / Core group</a></li>
+          <li><a href="#participating" class="nav-link">Country participation</a></li>
+          <li><a href="#grants-calls" class="nav-link">Grants and calls</a></li>
+          <li><a href="#activities" class="nav-link">Activities</a></li>
+          <li><a href="#news" class="nav-link">News</a></li>
+          <li><a href="#join" class="nav-link">How to join</a></li>
+          <li><a href="#credits" class="nav-link">Credits</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__controls">
+        <button class="control-btn" data-theme-toggle aria-label="Switch theme">
+          <span class="control-btn__icon">☀️</span>
+          <span class="control-btn__text">Theme</span>
+        </button>
+        <button class="control-btn" data-a11y-toggle aria-label="Accessibility options">
+          <span class="control-btn__icon">♿</span>
+          <span class="control-btn__text">Accessibility</span>
+        </button>
+      </div>
+    </aside>
+
+    <header class="mobile-header">
+      <a href="#home" class="mobile-logo">
+        <img src="./images/logo.svg" alt="PlantWallK" class="mobile-logo__img">
+      </a>
+      <div style="display:flex;gap:var(--space-2)">
+        <button class="control-btn" data-theme-toggle aria-label="Toggle theme">
+          <span class="control-btn__icon">☀️</span>
+        </button>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav">
+          <span>Menu</span>
+          <span class="mobile-menu-btn__icon" aria-hidden="true">▼</span>
+        </button>
+      </div>
+    </header>
+
+    <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile navigation">
+      <ul class="mobile-nav__list">
+        <li><a href="#home" class="mobile-nav__link">Home</a></li>
+        <li><a href="#learn-more" class="mobile-nav__link">Learn more</a></li>
+        <li><a href="#working-groups" class="mobile-nav__link">Working Groups</a></li>
+        <li><a href="#leadership" class="mobile-nav__link">Leadership / Core group</a></li>
+        <li><a href="#participating" class="nav-link">Country participation</a></li>
+        <li><a href="#grants-calls" class="mobile-nav__link">Grants and calls</a></li>
+        <li><a href="#activities" class="mobile-nav__link">Activities</a></li>
+        <li><a href="#news" class="mobile-nav__link">News</a></li>
+        <li><a href="#join" class="mobile-nav__link">How to join</a></li>
+        <li><a href="#credits" class="nav-link">Credits</a></li>
+        <li>
+          <a href="https://www.cost.eu/actions/CA24116/" target="_blank" rel="noopener noreferrer" class="mobile-nav__link mobile-nav__link--cta">
+            Official COST Action page ↗
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="main-content">
+
+      <section id="home" class="section section--wide" data-bg="hero" data-section="home">
+        <div class="section__inner">
+          <div class="content-surface content-surface--hero">
+            <p class="hero__kicker">
+              <a href="https://www.cost.eu/actions/CA24116/" target="_blank" rel="noopener noreferrer">
+                PLANTWALLK · COST ACTION CA24116
+              </a>
+            </p>
+
+            <h1 class="hero__title">Advancing Plant Cell Wall Knowledge.</h1>
+
+            <p class="hero__lead">
+              PlantWallK brings together researchers from imaging, chemistry, biophysics, computation and modelling to overcome fragmented knowledge and methods.
+            </p>
+
+            <div class="glass-card" style="margin-top:var(--space-6)">
+              
+              <div class="registrations-grid">
+                <div class="feature-alert">
+                   <span class="status-badge status-badge--open">Registration Open</span>
+                   <h3 style="margin:var(--space-2) 0; font-size:var(--text-xl)">First WG1–WG3 meeting</h3>
+                   <p style="margin-bottom:var(--space-3); color:var(--text-secondary)">Prague, 25–26 May</p>
+                   <a href="./prague-registration.html" class="btn btn--secondary btn--small" style="margin-top:auto">Register ↗</a>
+                </div>
+
+                <div class="feature-alert">
+                   <span class="status-badge status-badge--open">Registration Open</span>
+                   <h3 style="margin:var(--space-2) 0; font-size:var(--text-xl)">Satellite: EPCC</h3>
+                   <p style="margin-bottom:var(--space-3); color:var(--text-secondary)">Prague, May 26–27</p>
+                   <a href="./epcc-registration.html" class="btn btn--secondary btn--small" style="margin-top:auto">Register ↗</a>
+                </div>
+              </div>
+
+              <div class="hero__cta">
+                <a href="#learn-more" class="btn btn--primary btn--large">Learn more</a>
+                <a href="#join" class="btn btn--secondary btn--large">How to join</a>
+                <a href="#grants-calls" class="btn btn--secondary btn--large">Grants and Calls</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section id="learn-more" class="section" data-bg="about" data-section="learn-more">
+        <div class="section__inner">
+          <div class="content-surface content-surface--wide">
+            <h2 class="sr-only">Learn more</h2>
+            
+            <div class="rail-block">
+              <div class="rail-block__sidebar">
+                <span class="rail-block__label">01 Context</span>
+                <h3 class="rail-block__title">About PlantWallK</h3>
+              </div>
+              <div class="rail-block__content text-content">
+                <p class="drop-cap">
+                  Plant cell walls are essential for plant development and survival, providing plants with numerous key functions. Beyond their biological role, cell walls represent a major carbon sink and a key renewable resource for food, feed, materials, and bioenergy.
+                </p>
+                <p>
+                  Although our understanding of this complex and dynamic system has greatly advanced, important knowledge gaps remain, which limits the effective use of plant cell walls.
+                </p>
+                <p>
+                  The Action brings together researchers from imaging, chemistry, biophysics, computation and modelling to overcome fragmented knowledge and methods. Multidisciplinary cooperation of PlantWallK aims to improve how we visualise, analyse and simulate cell walls, build shared data and knowledge infrastructure, and create a common language for this community.
+                </p>
+              </div>
+            </div>
+
+            <hr class="rail-divider">
+
+            <div class="rail-block">
+              <div class="rail-block__sidebar">
+                <span class="rail-block__label">02 Goals</span>
+                <h3 class="rail-block__title">Objectives</h3>
+              </div>
+              <div class="rail-block__content">
+                <div class="manifesto-text">
+                  <p>
+                    The objectives focus on strengthening coordination and capacity in cell wall research by integrating methodologies, instrumentation, and data analysis across disciplines, while identifying and addressing gaps in existing tools, probes, and protocols. This includes developing standardized frameworks, validated molecular recognition tools, advanced detection and data-processing methods—particularly leveraging deep learning—and establishing best practices for data infrastructure, sharing, and model development. In parallel, the goals emphasize building a robust European research ecosystem through shared infrastructures, validated methodologies, interdisciplinary expert networks, and sustained training efforts, with particular support for early-career researchers via collaborative opportunities, workshops, and increased visibility within the scientific community.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <hr class="rail-divider">
+
+            <div class="ledger-group" aria-label="Mission scope instruments">
+              
+              <details class="ledger-strip">
+                <summary class="ledger-strip__summary">
+                  <h3 class="ledger-strip__title">Mission</h3>
+                  <span class="ledger-strip__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="ledger-strip__content">
+                  <p>
+                    PlantWallK is dedicated to overcome fragmented expertise by weaving together methods, image analysis and multiscale modelling into a coordinated European network on plant cell walls.
+                  </p>
+                </div>
+              </details>
+
+              <details class="ledger-strip">
+                <summary class="ledger-strip__summary">
+                  <h3 class="ledger-strip__title">Scope</h3>
+                  <span class="ledger-strip__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="ledger-strip__content">
+                  <p>
+                    Scope text will follow the official Memorandum of Understanding and COST documentation for CA24116.
+                    (If you paste the official scope/objectives text from the COST page, we will replace this block verbatim.)
+                  </p>
+                </div>
+              </details>
+
+              <details class="ledger-strip">
+                <summary class="ledger-strip__summary">
+                  <h3 class="ledger-strip__title">Instruments</h3>
+                  <span class="ledger-strip__icon" aria-hidden="true"></span>
+                </summary>
+                <div class="ledger-strip__content">
+                  <p>
+                    Meetings, STSMs, training schools, workshops and shared protocols help the community adopt state-of-the-art tools and build lasting collaborations.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+<section id="working-groups" class="section" data-bg="wg" data-section="working-groups">
+        <div class="section__inner">
+          <div class="content-surface content-surface--wide">
+            <h2>Working Groups</h2>
+            <p style="margin-top:0">
+              PlantWallK is organized into three interlinked Working Groups.
+            </p>
+
+            <div class="trinity-system">
+              <div class="trinity-nexus" role="tablist" aria-label="Working Groups">
+                
+                <button class="trinity-node trinity-node--wg1 active" role="tab" aria-selected="true" aria-controls="panel-wg1" id="tab-wg1" data-trinity-target="wg1">
+                  <span class="trinity-node__marker">1</span>
+                  <span class="trinity-node__label">Methods &amp; Probes</span>
+                </button>
+
+                <div class="trinity-connector" aria-hidden="true"></div>
+
+                <button class="trinity-node trinity-node--wg2" role="tab" aria-selected="false" aria-controls="panel-wg2" id="tab-wg2" data-trinity-target="wg2">
+                  <span class="trinity-node__marker">2</span>
+                  <span class="trinity-node__label">Image &amp; Data Analysis</span>
+                </button>
+
+                <div class="trinity-connector" aria-hidden="true"></div>
+
+                <button class="trinity-node trinity-node--wg3" role="tab" aria-selected="false" aria-controls="panel-wg3" id="tab-wg3" data-trinity-target="wg3">
+                  <span class="trinity-node__marker">3</span>
+                  <span class="trinity-node__label">Multiscale Modelling</span>
+                </button>
+
+              </div>
+
+              <div class="trinity-viewport">
+                
+                <article id="panel-wg1" class="trinity-panel active" role="tabpanel" aria-labelledby="tab-wg1">
+                  <div class="trinity-panel__content">
+                    <p class="trinity-panel__lead">
+                      The working group focuses on advancing methodologies for analyzing the mechanical and biochemical properties of plant cell walls. It promotes the development, evaluation, and integration of innovative techniques through interdisciplinary collaboration, including conferences, workshops, training activities, and short-term scientific missions. As a central pillar of the Action, its progress underpins the effectiveness and impact of all other working groups.
+                    </p>
+
+                    <details class="trinity-details">
+                      <summary class="trinity-details__summary">Main tasks &amp; Leaders</summary>
+                      <div class="trinity-details__body">
+                        <ol class="premium-list">
+                          <li>Create a comprehensive, standardized inventory of existing methods for mechanical and biochemical cell wall analysis, including imaging, analytical techniques, and molecular recognition tools, with emphasis on quantitative, reproducible approaches applicable to plant and crop materials.</li>
+                          <li>Identify methodological gaps and introduce novel approaches, particularly in situ and in vivo measurement techniques, by transferring suitable methods from other research fields such as biomedical and material sciences.</li>
+                          <li>Establish a sustainable framework for developing and validating new tools, including imaging strategies and molecular probes, supported by coordinated STSMs, joint grant applications, open data repositories, and hands-on training to enable long-term adoption by the scientific community.</li>
+                          <li>Monitor, document, and disseminate progress in method development by compiling validated and emerging techniques into an openly accessible, continuously updated database hosted on the Action website, thereby supporting future experimental practice and broad community uptake.</li>
+                        </ol>
+                        <div class="wg-card__leaders">
+                          <strong>Leader:</strong> Aline Voxeur
+                        </div>
+                      </div>
+                    </details>
+                    
+                    <div class="trinity-panel__footer">
+                      <button class="wg-card__toggle btn btn--secondary" type="button" aria-expanded="false" data-universe-toggle="wg1">
+                         <span class="wg-card__toggle-label">Open lab universe</span>
+                         <span class="wg-card__toggle-hint"> · Microscopy experiment</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="wg-universe wg-universe--microscopy" data-universe-id="wg1-microscopy" hidden>
+                    <div class="wg-universe__shell">
+                      <div class="wg-universe__visual">
+                        <div class="wg-universe__canvas" data-universe-canvas aria-hidden="true"></div>
+                      </div>
+                      <div class="wg-universe__panel">
+                        <p class="wg-universe__eyebrow">Aline Voxeur · WG1 Leader</p>
+                        <p class="wg-universe__title">Cell wall analysis methods and probes</p>
+                        <label class="wg-universe__control">
+                          <span class="wg-universe__control-label">Optical section depth</span>
+                          <input type="range" min="0" max="100" value="55" class="wg-universe__slider" data-universe-control="wg1-intensity">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article id="panel-wg2" class="trinity-panel" role="tabpanel" aria-labelledby="tab-wg2" hidden>
+                  <div class="trinity-panel__content">
+                    <p class="trinity-panel__lead">
+                      The working group focuses on the development and dissemination of advanced image and data analysis methodologies for plant cell wall research, with a strong emphasis on deep learning–based approaches. It promotes the adoption of these methods through interdisciplinary collaboration, inventories of existing tools, workshops, and coordinated engagement with analysis specialists and research infrastructures. In parallel, it aims to build long-term expertise by training and integrating early-career researchers in modern computational analysis strategies.
+                    </p>
+
+                    <details class="trinity-details">
+                      <summary class="trinity-details__summary">Main tasks &amp; Leaders</summary>
+                      <div class="trinity-details__body">
+                        <ol class="premium-list">
+                          <li>Map and consolidate existing image and data analysis approaches used in plant cell wall research by organizing an interdisciplinary conference involving tool developers, deep learning specialists, research infrastructures, and industry stakeholders.</li>
+                          <li>Identify analytical gaps and implement novel computational strategies by coordinating collaborations with mathematicians, data scientists, and image analysis experts, and translating these strategies into targeted, community-oriented workshops.</li>
+                        </ol>
+                        <div class="wg-card__leaders">
+                          <strong>Leader:</strong> Stéphane Verger
+                        </div>
+                      </div>
+                    </details>
+
+                    <div class="trinity-panel__footer">
+                      <button class="wg-card__toggle btn btn--secondary" type="button" aria-expanded="false" data-universe-toggle="wg2">
+                         <span class="wg-card__toggle-label">Open lab universe</span>
+                         <span class="wg-card__toggle-hint"> · Computer Vision experiment</span>
+                      </button>
+                    </div>
+                  </div>
+
+                   <div class="wg-universe wg-universe--chemistry" data-universe-id="wg2-chemistry" hidden>
+                    <div class="wg-universe__shell">
+                      <div class="wg-universe__visual">
+                        <div class="wg-chemistry-scope" aria-hidden="true">
+                          <div class="wg-chemistry__zoom-wrap" data-wg2-zoom-wrap>
+                            <div class="wg-chemistry__zoom-bg" data-wg2-zoom-bg style="background-image: url('./images/arabidopsis_root_stained_with_pectin_probe.webp');" aria-hidden="true"></div>
+                            <div class="wg-chemistry__layer" data-chem-layer>
+                              <canvas class="wg-chemistry__canvas" data-chem-canvas aria-hidden="true"></canvas>
+                            </div>
+                            <div class="wg-chemistry__vignette" aria-hidden="true"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wg-universe__panel">
+                        <p class="wg-universe__eyebrow">Stéphane Verger · WG2 Leader</p>
+                        <p class="wg-universe__title">Advanced image and data analysis</p>
+                        <div class="wg-universe__control">
+                          <span class="wg-universe__control-label">Zoom into the feature map (1× → 50×)</span>
+                          <div class="wg-universe__range-row">
+                            <input type="range" min="1" max="50" value="8" class="wg-universe__slider" data-chem-zoom>
+                            <span class="wg-universe__range-value" data-chem-zoom-label>8×</span>
+                          </div>
+                        </div>
+                        <div class="wg-universe__control-group">
+                           <label class="wg-universe__check"><input type="checkbox" data-chem-ch="bundles" checked><span>Input</span></label>
+                           <label class="wg-universe__check"><input type="checkbox" data-chem-ch="primary" checked><span>Analysis</span></label>
+                           <label class="wg-universe__check"><input type="checkbox" data-chem-ch="secondary" checked><span>BBox</span></label>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                </article>
+
+                <article id="panel-wg3" class="trinity-panel" role="tabpanel" aria-labelledby="tab-wg3" hidden>
+                  <div class="trinity-panel__content">
+                    <p class="trinity-panel__lead">
+                      Working Group 3 focuses on advancing multiscale, data-driven modeling in plant cell wall research through strong interdisciplinary collaboration. It brings together expertise from biology, biochemistry, physics, mathematics, and computational sciences to address challenges related to complex multimodal datasets. Through coordinated discussions, conferences, training activities, and joint grant development, WG3 aims to establish a sustainable interdisciplinary community with long-term impact beyond the Action.
+                    </p>
+
+                    <details class="trinity-details">
+                      <summary class="trinity-details__summary">Main tasks &amp; Leaders</summary>
+                      <div class="trinity-details__body">
+                        <ol class="premium-list">
+                          <li>Facilitate effective dialogue between experimental and modeling communities by presenting complex multiscale imaging data to mathematicians and computer scientists and jointly identifying modeling solutions relevant to plant cell wall research.</li>
+                          <li>Strengthen integration between biologists and modeling experts through a structured STSM program that promotes knowledge exchange and the development of new multiscale modeling modules.</li>
+                          <li>Address infrastructural challenges related to big data handling, including computational capacity and large-scale data storage, by defining strategic solutions in collaboration with European research infrastructures such as EOSC and Euro-Bioimaging.</li>
+                          <li>Build long-term modeling competence through education and training, by developing an interactive interdisciplinary course for undergraduate and graduate students focused on multiscale data evaluation and big data analysis in cell wall research.</li>
+                        </ol>
+                        <div class="wg-card__leaders">
+                          <strong>Leaders:</strong> Dorota Kwiatkowska, Grégory Mouille
+                        </div>
+                      </div>
+                    </details>
+                    
+                    <div class="trinity-panel__footer">
+                      <button class="wg-card__toggle btn btn--secondary" type="button" aria-expanded="false" data-universe-toggle="wg3">
+                         <span class="wg-card__toggle-label">Open lab universe</span>
+                         <span class="wg-card__toggle-hint"> · Modelling experiment</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="wg-universe wg-universe--modelling" data-universe-id="wg3-modelling" hidden>
+                    <div class="wg-universe__shell">
+                      <div class="wg-universe__visual">
+                        <div class="wg-universe__canvas" data-universe-canvas aria-hidden="true"></div>
+                      </div>
+                      <div class="wg-universe__panel">
+                        <p class="wg-universe__eyebrow">Dorota Kwiatkowska & Grégory Mouille</p>
+                        <p class="wg-universe__title">Interdisciplinary approach for multiscale modeling</p>
+                        <label class="wg-universe__control">
+                          <span class="wg-universe__control-label">Applied stress</span>
+                          <input type="range" min="0" max="100" value="35" class="wg-universe__slider" data-universe-control="wg3-stress">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="leadership" class="section" data-bg="wg" data-section="leadership">
+        <div class="section__inner">
+          <div class="content-surface content-surface--hero">
+            <h2>Leadership / Core group</h2>
+            <p style="margin-top:0">
+              Leadership roles are shown clearly. (Full membership lists are not displayed on the website.)
+            </p>
+
+            <div class="view-toggle" style="margin: var(--space-6) 0;">
+              <button class="view-toggle__btn" type="button" data-leadership-filter="all" aria-pressed="true">
+                <span class="view-toggle__text">All</span>
+              </button>
+              <button class="view-toggle__btn" type="button" data-leadership-filter="wg1" aria-pressed="false">
+                <span class="view-toggle__text">WG1</span>
+              </button>
+              <button class="view-toggle__btn" type="button" data-leadership-filter="wg2" aria-pressed="false">
+                <span class="view-toggle__text">WG2</span>
+              </button>
+              <button class="view-toggle__btn" type="button" data-leadership-filter="wg3" aria-pressed="false">
+                <span class="view-toggle__text">WG3</span>
+              </button>
+            </div>
+
+            <div class="leadership-subsection">
+              <h3>Chair and Vice-Chair</h3>
+              <div class="leader-grid">
+                <div class="leader-card leader-card--leadership" data-leader-wg="all">
+                  <p class="leader-card__name">Kateřina Schwarzerová</p>
+                  <p class="leader-card__role">Chair</p>
+                  <p class="leader-card__country">Czech Republic</p>
+                </div>
+                <div class="leader-card leader-card--leadership" data-leader-wg="all">
+                  <p class="leader-card__name">Jozef Mravec</p>
+                  <p class="leader-card__role">Vice-Chair</p>
+                  <p class="leader-card__country">Slovakia</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="leadership-subsection">
+              <h3>Coordinators</h3>
+              <div class="leader-grid">
+                <div class="leader-card leader-card--leadership" data-leader-wg="all">
+                  <p class="leader-card__name">Paula Sampaio</p>
+                  <p class="leader-card__role">Grant Awarding Coordinator</p>
+                  <p class="leader-card__country">Portugal</p>
+                </div>
+                <div class="leader-card leader-card--leadership" data-leader-wg="all">
+                  <p class="leader-card__name">Laura Bacete</p>
+                  <p class="leader-card__role">Science Communication Coordinator</p>
+                  <p class="leader-card__country">Sweden</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="leadership-subsection">
+              <h3>Working Group leaders and co-leaders</h3>
+              <div class="leader-grid">
+                <div class="leader-card leader-card--wg1" data-leader-wg="wg1">
+                  <p class="leader-card__name">Aline Voxeur</p>
+                  <p class="leader-card__role">WG1 Leader</p>
+                  <p class="leader-card__country">France</p>
+                </div>
+
+                <div class="leader-card leader-card--wg2" data-leader-wg="wg2">
+                  <p class="leader-card__name">Stéphane Verger</p>
+                  <p class="leader-card__role">WG2 Leader</p>
+                  <p class="leader-card__country">Sweden</p>
+                </div>
+
+                <div class="leader-card leader-card--wg3" data-leader-wg="wg3">
+                  <p class="leader-card__name">Dorota Kwiatkowska</p>
+                  <p class="leader-card__role">WG3 Leader</p>
+                  <p class="leader-card__country">Poland</p>
+                </div>
+                <div class="leader-card leader-card--wg3" data-leader-wg="wg3">
+                  <p class="leader-card__name">Grégory Mouille</p>
+                  <p class="leader-card__role">WG3 Co-Leader</p>
+                  <p class="leader-card__country">France</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="leadership-subsection">
+              <h3>Management Committee (MC)</h3>
+              <p style="margin-top:0;color:var(--text-secondary)">
+                MC information will be published here (roles and names), following COST Action practices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="participating" class="section" data-bg="about" data-lazy-map data-section="participating">
+        <div class="section__inner">
+          <div class="content-surface content-surface--hero">
+            <h2 id="participating-title">Country participation</h2>
+            <p style="margin-top:0">
+              Countries participating in PlantWallK. The map shows countries only (no individual member names).
+            </p>
+
+            <div class="map-section">
+              <div class="map-counters">
+                <div class="counter" data-target="26">
+                  <span class="counter__value">0</span>
+                  <span class="counter__label">Countries</span>
+                </div>
+                <div class="counter" data-target="108">
+                  <span class="counter__value">0</span>
+                  <span class="counter__label">Participants</span>
+                </div>
+              </div>
+
+              <div class="view-toggle">
+                <button id="view-toggle-btn" class="view-toggle__btn" data-current-view="map" aria-pressed="false" aria-controls="map-view table-view">
+                  <span class="view-toggle__icon" aria-hidden="true">📋</span>
+                  <span class="view-toggle__text">Switch to table</span>
+                </button>
+              </div>
+
+              <div id="map-view" class="view-panel">
+                <div class="map-wrapper">
+                  <div class="map-controls">
+                    <button class="map-control" id="zoom-in" aria-label="Zoom in">+</button>
+                    <button class="map-control" id="zoom-out" aria-label="Zoom out">−</button>
+                    <button class="map-control map-control--reset" id="zoom-reset" aria-label="Reset zoom">Reset</button>
+                  </div>
+                  <div class="map-container map-container--loading" role="img" aria-label="Interactive map of participating countries"></div>
+                </div>
+
+                <div class="map-legend">
+                  <h4 class="map-legend__title">Legend</h4>
+                  <div class="map-legend__items">
+                    <div class="map-legend__item">
+                      <span class="legend-dot"></span>
+                      <span>Participating country</span>
+                    </div>
+                    <div class="map-legend__item">
+                      <span class="leadership-badge__dot"></span>
+                      <span>Management Comitee member(s)</span>
+                    </div>
+                  </div>
+                  <p class="map-legend__note">
+                    <span style="display:inline-flex; align-items:center; gap:6px;">
+                      <span style="font-size:1.2em">👆</span> 
+                      <span><strong>Hover</strong> for status. <strong>Click</strong> countries with MC members to view details.</span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div id="table-view" class="view-panel" hidden>
+                <h3 id="table-view-heading" tabindex="-1">Participating Countries</h3>
+                <div class="table-wrapper">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Country</th>
+                        <th scope="col">Participants</th>
+                        <th scope="col">WG1</th>
+                        <th scope="col">WG2</th>
+                        <th scope="col">WG3</th>
+                        <th scope="col">Leadership</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Czech Republic</td><td>22</td><td>18</td><td>14</td><td>12</td><td><span class="leader-dot" title="Chair: Kateřina Schwarzerová"></span></td></tr>
+                      <tr><td>France</td><td>14</td><td>12</td><td>8</td><td>10</td><td><span class="leader-dot" title="WG1 Leader, WG3 Co-Leader"></span></td></tr>
+                      <tr><td>Türkiye</td><td>14</td><td>10</td><td>8</td><td>6</td><td>—</td></tr>
+                      <tr><td>Poland</td><td>10</td><td>8</td><td>6</td><td>8</td><td><span class="leader-dot" title="WG3 Leader"></span></td></tr>
+                      <tr><td>Serbia</td><td>10</td><td>8</td><td>6</td><td>5</td><td>—</td></tr>
+                      <tr><td>Germany</td><td>5</td><td>4</td><td>3</td><td>2</td><td>—</td></tr>
+                      <tr><td>Spain</td><td>4</td><td>3</td><td>2</td><td>2</td><td>—</td></tr>
+                      <tr><td>Slovakia</td><td>3</td><td>2</td><td>2</td><td>1</td><td><span class="leader-dot" title="Vice-Chair"></span></td></tr>
+                      <tr><td>United Kingdom</td><td>3</td><td>2</td><td>2</td><td>1</td><td>—</td></tr>
+                      <tr><td>Sweden</td><td>2</td><td>1</td><td>2</td><td>1</td><td><span class="leader-dot" title="WG2 Leader, Science Communication"></span></td></tr>
+                      <tr><td>Portugal</td><td>2</td><td>1</td><td>1</td><td>1</td><td><span class="leader-dot" title="Grant Awarding Coordinator"></span></td></tr>
+                      <tr><td>Belgium</td><td>2</td><td>1</td><td>2</td><td>1</td><td>—</td></tr>
+                      <tr><td>Finland</td><td>2</td><td>1</td><td>1</td><td>1</td><td>—</td></tr>
+                      <tr><td>Ireland</td><td>2</td><td>2</td><td>1</td><td>0</td><td>—</td></tr>
+                      <tr><td>Albania</td><td>2</td><td>2</td><td>1</td><td>1</td><td>—</td></tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th scope="row">Total</th>
+                        <td>108</td>
+                        <td colspan="4"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="grants-calls" class="section" data-bg="grants" data-section="grants-calls">
+        <div class="section__inner">
+          <div class="content-surface content-surface--hero">
+            <h2>Grants and calls</h2>
+            <p style="margin-top:0">
+              PlantWallk offers grants to support mobility, collaboration, and career development across the network. We fund both research exchanges and conference participation through Mobility Grants and Conference Grants.
+            </p>
+            <p>
+              Applications are submitted via <a href="https://e-services.cost.eu/user/login" target="_blank" rel="noopener noreferrer">e-COST</a>*. Applicants need an e-COST profile (you can create one during the process). Before applying, applicants should read the <a href="https://www.cost.eu/uploads/2025/11/COST-094-21-Annotated-Rules-for-COST-Actions-Level-C-V3.0-25-IX-2025.pdf" target="_blank" rel="noopener noreferrer">Annotated Rules for COST Actions</a>.**
+            </p>
+            <p>
+              The PlantWallK Grant Awarding Process document describes the application steps, evaluation criteria, and the documents grantees must submit to receive the grant.
+            </p>
+            <div class="hero__cta" style="margin-bottom:var(--space-6)">
+              <a href="#" class="btn btn--secondary" aria-disabled="true">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Download the PlantWallK Grant Awarding Process document
+              </a>
+            </div>
+
+            <div class="glass-card" style="margin-bottom:var(--space-6)">
+              <h3 style="margin-bottom:var(--space-2)">Contacts for grants and workshop offers</h3>
+              <ul style="margin-bottom:0;list-style:none;padding:0">
+                <li>Paula Sampaio (Grant Awarding Coordinator)</li>
+              </ul>
+              <p style="margin-top:var(--space-4);margin-bottom:0;color:var(--text-secondary)">
+                No emails to avoid spam. Application is through eCOST anyways so it would be for questions etc.
+              </p>
+            </div>
+
+            <div class="grant-cards">
+              <article class="grant-card">
+                <span class="status-badge status-badge--open">Open</span>
+                <h3>Short-Term Scientific Missions (STSMs)</h3>
+                <p>Research exchange visits between COST members to support collaboration and skill transfer.</p>
+                <p class="text-sm text-secondary">
+                  Call opens: 2026-02-02<br>
+                  Deadline: 2026-08-01 (or until funds are used)
+                </p>
+                <details>
+                  <summary style="cursor:pointer;font-weight:600">View details</summary>
+                  <div style="margin-top:var(--space-3)">
+                    <p><strong>STSM – 1st Call 2026</strong></p>
+                    <p>
+                      <strong>Call opens:</strong> 2026-02-02<br>
+                      <strong>Deadline:</strong> 2026-08-01 (or until funds are used)<br>
+                      <strong>Period to carry out the STSM:</strong> 2026-03-02– 2026-08-31<br>
+                      <strong>Report deadline:</strong> within 30 days after the end of the STSM, or 15 days after the end of the Grant Period (whichever comes first)
+                    </p>
+                    <p><strong>Purpose</strong><br>
+                    PlantWallK supports Short-Term Scientific Missions that allow researchers and innovators to visit a host organisation in a country other than their country of affiliation, in order to carry out a defined piece of scientific work within a set time frame.
+                    The grant supports capacity building and knowledge transfer through bilateral or multilateral collaboration.
+                    It also supports activities that contribute to the objectives and deliverables of the PlantWallK Memorandum of Understanding.
+                    STSMs enable access to expertise, equipment, or techniques not available at the home institution and support project work with an international team, with scope for longer-term collaboration.</p>
+                    
+                    <p><strong>Eligibility</strong><br>
+                    Applicants must be Action Participants. The STSM must be completed in full within a single Grant Period and within the lifetime of the PlantWallK Action.</p>
+                    
+                    <p><strong>Funding and conditions</strong><br>
+                    The STSM grant is a fixed financial contribution towards overall costs linked to the mission, including travel, accommodation, subsistence, project implementation, report preparation, and the overall effort required to complete the mission.
+                    STSM grantees are responsible for all matters related to personal security, health, taxation, social security, and pension arrangements.
+                    The COST Association and the Grant Holder do not act as an employer. The STSM grant is not a salary.</p>
+
+                    <div class="hero__cta" style="margin-top:var(--space-4)">
+                      <a class="btn btn--primary" href="https://e-services.cost.eu/user/login" target="_blank" rel="noopener noreferrer">
+                        Apply via e-COST ↗
+                      </a>
+                    </div>
+                  </div>
+                </details>
+              </article>
+
+              <article class="grant-card">
+                <span class="status-badge status-badge--open">Open</span>
+                <h3>Young Researcher and Innovator (YRI) Conference Grants</h3>
+                <p>Support for Young Researchers and Innovators participating in Action activities.</p>
+                <p class="text-sm text-secondary">
+                  Call opens: 2026-02-02<br>
+                  Deadline: 2026-02-23
+                </p>
+                <details>
+                  <summary style="cursor:pointer;font-weight:600">View details</summary>
+                  <div style="margin-top:var(--space-3)">
+                    <p>
+                      <strong>Call opens:</strong> 2026-02-02<br>
+                      <strong>Deadline:</strong> 2026-02-23<br>
+                      <strong>Period to attend a conference:</strong> 2026-03-02– 2026-08-31<br>
+                      <strong>Report deadline:</strong> within 30 days after the end of the conference, or 15 days after the end of the Grant Period (whichever comes first)
+                    </p>
+                    
+                    <p><strong>Purpose</strong><br>
+                    PlantWallK supports Young Researchers and Innovators (under 40 years of age) to attend international high-level conferences and present their own work within the scope of the Action through an oral or poster presentation.
+                    The grant also supports networking and future collaboration.</p>
+                    
+                    <p><strong>Eligibility</strong><br>
+                    Applicants must be Action Participants and meet the definition of a Young Researcher and Innovator.
+                    The conference contribution must be relevant to PlantWallK.</p>
+                    
+                    <p><strong>Funding and conditions</strong><br>
+                    The grant is a financial contribution towards travel, accommodation, subsistence, conference registration fees, and the overall effort linked to participation and reporting.
+                    Conferences must be attended in person.</p>
+
+                    <div class="hero__cta" style="margin-top:var(--space-4)">
+                      <a class="btn btn--primary" href="https://e-services.cost.eu/user/login" target="_blank" rel="noopener noreferrer">
+                        Apply via e-COST ↗
+                      </a>
+                    </div>
+                  </div>
+                </details>
+              </article>
+
+              <article class="grant-card">
+                <span class="status-badge status-badge--soon">Opening Soon</span>
+                <h3>Inclusiveness Target Country (ITC) Conference Grants</h3>
+                <p>Support for participants from Inclusiveness Target Countries to attend conferences and Action activities.</p>
+                <p class="text-sm text-secondary">
+                  Call opens: 2026-02-02<br>
+                  Deadline: 2026-02-23
+                </p>
+                <details>
+                  <summary style="cursor:pointer;font-weight:600">View details</summary>
+                  <div style="margin-top:var(--space-3)">
+                    <p>
+                      <strong>Call opens:</strong> 2026-02-02<br>
+                      <strong>Deadline:</strong> 2026-02-23<br>
+                      <strong>Period to attend a conference:</strong> 2026-03-02– 2026-08-31<br>
+                      <strong>Report deadline:</strong> within 30 days after the end of the conference, or 15 days after the end of the Grant Period (whichever comes first)
+                    </p>
+                    
+                    <p><strong>Purpose</strong><br>
+                    PlantWallK supports researchers and innovators affiliated with legal entities in Inclusiveness Target Countries (ITCs) and Near Neighbour Countries (NNCs), as listed in the Country and Organisations Table, to attend international high-level conferences.
+                    Grantees must present their work within the scope of the Action through an oral presentation.
+                    The grant also supports networking and the establishment of new contacts for future collaboration.</p>
+                    
+                    <p><strong>Eligibility</strong><br>
+                    Applicants must be Action Participants and affiliated with a legal entity in an ITC or NNC.
+                    The planned conference contribution must fall within the scope of PlantWallK.</p>
+                    
+                    <p><strong>Funding and conditions</strong><br>
+                    The grant is a financial contribution towards travel, accommodation, subsistence, conference registration fees, and the overall effort linked to participation and reporting.
+                    Conferences may be attended in person or virtually.</p>
+
+                    <div class="hero__cta" style="margin-top:var(--space-4)">
+                      <a class="btn btn--primary" href="https://e-services.cost.eu/user/login" target="_blank" rel="noopener noreferrer">
+                        Apply via e-COST ↗
+                      </a>
+                    </div>
+                  </div>
+                </details>
+              </article>
+
+              <article class="grant-card">
+                <span class="status-badge status-badge--closed">Closed</span>
+                <h3>Dissemination Conference Grants</h3>
+                <p>Support dissemination of Action outcomes at conferences.</p>
+                <p class="text-sm text-secondary">
+                  Call opens: 2026-02-02<br>
+                  Deadline: 2026-02-23
+                </p>
+                <details>
+                  <summary style="cursor:pointer;font-weight:600">View details</summary>
+                  <div style="margin-top:var(--space-3)">
+                    <p><strong>Dissemination Conference Grant Call 2026</strong></p>
+                    <p>
+                      <strong>Call opens:</strong> 2026-02-02<br>
+                      <strong>Deadline:</strong> 2026-02-23<br>
+                      <strong>Period to attend a conference:</strong> 2026-03-02– 2026-08-31<br>
+                      <strong>Report deadline:</strong> within 30 days after the end of the conference, or 15 days after the end of the Grant Period (whichever comes first)
+                    </p>
+                    
+                    <p><strong>Purpose</strong><br>
+                    PlantWallK supports Action Participants to attend international conferences and give an oral presentation that presents the Action, its activities, and its results.
+                    The grant also supports networking and the development of contacts that may lead to future collaboration.</p>
+                    
+                    <p><strong>Eligibility</strong><br>
+                    Applicants must be Action Participants. The conference topic and the planned presentation must be relevant to PlantWallK and focus on communicating Action activities and results.</p>
+                    
+                    <p><strong>Funding and conditions</strong><br>
+                    The grant is a financial contribution towards travel, accommodation, subsistence, conference registration fees, and the overall effort linked to participation and reporting.
+                    Conferences must be attended in person.</p>
+
+                    <div class="hero__cta" style="margin-top:var(--space-4)">
+                      <a class="btn btn--primary" href="https://e-services.cost.eu/user/login" target="_blank" rel="noopener noreferrer">
+                        Apply via e-COST ↗
+                      </a>
+                    </div>
+                  </div>
+                </details>
+              </article>
+
+              <article class="grant-card">
+                <span class="status-badge status-badge--open">Open</span>
+                <h3>Call for workshop offers</h3>
+                <p>Submit workshop proposals. Accepted offers will be used to compile a workshop schedule.</p>
+                <details>
+                  <summary style="cursor:pointer;font-weight:600">View details &amp; submit proposal</summary>
+                  <div style="margin-top:var(--space-3)">
+                    <p><strong>Purpose</strong><br>Collect workshop offers each year for any year of the Action.</p>
+                    <p><strong>Eligibility</strong><br>Open to Action participants and partner organisers (aligned with Action aims).</p>
+                    <p><strong>What to submit</strong><br>Use the form below (static-only: it will generate a pre-filled email).</p>
+
+                    <div class="glass-card" style="margin-top:var(--space-4)">
+                      <h4 style="margin-bottom:var(--space-3)">Workshop offer form</h4>
+
+                      <form id="workshop-offer-form">
+                        <div class="form-grid">
+                          <label>
+                            <span>Organiser name</span>
+                            <input type="text" name="organiser_name" required>
+                          </label>
+                          <label>
+                            <span>Institution</span>
+                            <input type="text" name="institution" required>
+                          </label>
+                          <label>
+                            <span>Email</span>
+                            <input type="email" name="email" required>
+                          </label>
+                          <label>
+                            <span>Proposed location</span>
+                            <input type="text" name="location" required>
+                          </label>
+                          <label>
+                            <span>Proposed timing (year + period/date)</span>
+                            <input type="text" name="timing" placeholder="e.g., 2027, May 10–12 or Q2 2027" required>
+                          </label>
+                          <label>
+                            <span>Duration (days)</span>
+                            <input type="number" name="duration_days" min="1" step="1" required>
+                          </label>
+                          <label>
+                            <span>Capacity (max participants)</span>
+                            <input type="number" name="capacity" min="1" step="1" required>
+                          </label>
+                          <label>
+                            <span>Topic</span>
+                            <input type="text" name="topic" required>
+                          </label>
+                          <label style="grid-column:1/-1">
+                            <span>Short scope / description</span>
+                            <textarea name="description" rows="4" required></textarea>
+                          </label>
+                          <label style="grid-column:1/-1">
+                            <span>Special requirements (optional)</span>
+                            <textarea name="requirements" rows="3"></textarea>
+                          </label>
+                        </div>
+
+                        <div class="hero__cta" style="margin-top:var(--space-4)">
+                          <button class="btn btn--primary" type="submit">
+                            Generate email submission ↗
+                          </button>
+                          <p style="margin:0;color:var(--text-secondary);font-size:var(--text-sm)">
+                            This will open your email client with a pre-filled message to the grants/workshop contacts.
+                          </p>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </details>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="activities" class="section" data-bg="grants" data-section="activities">
+        <div class="section__inner">
+          <div class="content-surface content-surface--hero">
+            <h2>Activities</h2>
+            <article class="glass-card">
+              <span class="status-badge status-badge--open">Details</span>
+              <h3 style="margin-bottom:var(--space-2)">First WG1–WG3 meeting (Logistics)</h3>
+              <ul style="margin-bottom:var(--space-6); padding-left:1.2em; color:var(--text-secondary);">
+                <li>Details will be finalised during winter and spring</li>
+                <li>Total capacity: 120 participants</li>
+                <li>2026 budget anticipates: 60 reimbursed participants and 3 invited speakers</li>
+                <li>Reimbursed participants selected based on abstracts</li>
+                <li>Call for abstracts published at the beginning of 2026</li>
+              </ul>
+            </article>
+
+            <article class="glass-card" style="margin-top:var(--space-4)">
+              <span class="status-badge status-badge--open">Details</span>
+              <h3 style="margin-bottom:var(--space-2)">Satellite meeting: EPCC</h3>
+              <p><strong>May 26–27</strong></p>
+              <p>Join the satellite meeting focused on cytoskeletal research.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="section" data-bg="grants" data-section="news">
+        <div class="section__inner">
+          <div class="content-surface content-surface--hero">
+            <h2>News</h2>
+            <p style="margin-top:0">Updates, announcements, and calls will be published here.</p>
+
+            <div class="grant-cards">
+              <article class="grant-card">
+                <h3>Website launch</h3>
+                <p>
+                  The PlantWallK website is now live. Initial information about the Action, Working Groups, leadership, grants and activities will be updated continuously as the Action develops.
+                </p>
+              </article>
+
+              <article class="grant-card">
+                <h3>Upcoming calls</h3>
+                <p>
+                  Grant calls and application details will be announced here as they are finalised, including deadlines and required documentation.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="join" class="section" data-bg="hero" data-section="join">
+        <div class="section__inner">
+          <div class="content-surface content-surface--hero">
+            <h2>How to join</h2>
+            <p style="margin-top:0">
+              Joining PlantWallK is handled via COST e-services. Membership evolves continuously, so the website does not list individual members.
+            </p>
+
+            <ol class="steps-list">
+              <li>
+                <strong>Create an e-COST account</strong>
+                <p>Register at <a href="https://e-services.cost.eu" target="_blank" rel="noopener noreferrer">e-services.cost.eu</a> using your institutional email.</p>
+              </li>
+              <li>
+                <strong>Apply to join Action CA24116</strong>
+                <p>Open the application link and submit your request to join the Working Groups.</p>
+              </li>
+              <li>
+                <strong>Confirmation</strong>
+                <p>Your request will be reviewed by the Action leadership in line with COST processes.</p>
+              </li>
+            </ol>
+
+            <div class="hero__cta">
+              <a href="https://e-services.cost.eu/action/CA24116/working-groups/apply" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+                Apply via COST e-services ↗
+              </a>
+            </div>
+
+            <p style="margin-top:var(--space-6);color:var(--text-secondary)">
+              Future note: a login area for database contributions will be added later (not implemented now).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="credits" class="section" data-bg="about" data-section="credits">
+        <div class="section__inner">
+          <div class="content-surface content-surface--hero">
+            <h2>Credits</h2>
+            <p>Site design and development credits, image sources, and acknowledgements will appear here.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="a11y-overlay" class="a11y-overlay" aria-hidden="true"></div>
+  <aside id="a11y-panel" class="a11y-panel" aria-hidden="true" aria-labelledby="a11y-panel-title">
+    <div class="a11y-panel__header">
+      <h2 id="a11y-panel-title" class="a11y-panel__title">Accessibility</h2>
+      <button id="a11y-close" class="a11y-panel__close" aria-label="Close accessibility panel">×</button>
+    </div>
+    <div class="a11y-panel__content">
+      <div class="a11y-option">
+        <div>
+          <p class="a11y-option__label">Dyslexia-friendly mode</p>
+          <p class="a11y-option__desc">Increased spacing, heavier font</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-dyslexia">
+          <span class="toggle-switch__slider"></span>
+        </label>
+      </div>
+
+      <div class="a11y-option">
+        <div>
+          <p class="a11y-option__label">High contrast</p>
+          <p class="a11y-option__desc">Enhanced text visibility</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-contrast">
+          <span class="toggle-switch__slider"></span>
+        </label>
+      </div>
+
+      <div class="a11y-option">
+        <div>
+          <p class="a11y-option__label">Reduce motion</p>
+          <p class="a11y-option__desc">Disable animations</p>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-motion">
+          <span class="toggle-switch__slider"></span>
+        </label>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <div class="site-footer__right">
+        <div class="site-footer__row">
+          <div class="site-footer__logos" aria-label="Funding logos">
+            <img
+              src="./images/cost-logo.jpg"
+              alt="COST (European Cooperation in Science and Technology)"
+              class="site-footer__logo site-footer__logo--cost"
+            >
+            <img
+              src="./images/eu-flag.svg"
+              alt="European Union"
+              class="site-footer__logo site-footer__logo--eu"
+            >
+          </div>
+        </div>
+
+        <p class="site-footer__funding">PlantWallK is funded by COST (European Cooperation in Science and Technology)</p>
+        <p class="site-footer__copyright">© 2024–2028 PlantWallK COST Action CA24116</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

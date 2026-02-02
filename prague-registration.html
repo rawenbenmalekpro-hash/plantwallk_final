@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"> <head>
+  <title>Prague Meeting Registration - PlantWallK</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/themes.css">
+  <script>
+  (function() {
+    const savedTheme = localStorage.getItem('plantwallk-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body>
+  <main class="content-surface content-surface--wide" style="margin: 4rem auto;">
+    <h2>Prague Meeting Registration</h2>
+    
+    <form id="prague-form" onsubmit="submitForm(event, 'prague')">
+      
+      <div class="form-grid form-grid--2-col">
+        <label class="form-group">
+          <span class="form-label">First Name</span>
+          <input type="text" name="firstName" class="input-field" required placeholder="Jane">
+        </label>
+        <label class="form-group">
+          <span class="form-label">Surname</span>
+          <input type="text" name="surname" class="input-field" required placeholder="Doe">
+        </label>
+      </div>
+
+      <div class="form-grid">
+        <label class="form-group">
+          <span class="form-label">Affiliation / Address</span>
+          <input type="text" name="affiliation" class="input-field" required>
+        </label>
+
+        <div class="form-group">
+          <span class="form-label">YRI Status (Young Researcher & Innovator)</span>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="yri_status" value="true" required> Yes (< 40 years old)</label>
+            <label class="radio-label"><input type="radio" name="yri_status" value="false"> No</label>
+          </div>
+        </div>
+
+        <label class="form-group">
+          <span class="form-label">Title of Contribution</span>
+          <input type="text" name="title" class="input-field" required>
+        </label>
+
+        <label class="form-group">
+          <span class="form-label">Abstract</span>
+          <textarea name="abstract" rows="6" class="input-field" required placeholder="Short abstract..."></textarea>
+        </label>
+
+        <label class="form-group">
+          <span class="form-label">Preference</span>
+          <select name="type" class="input-field" required>
+            <option value="" disabled selected>Select preference...</option>
+            <option value="lecture">Lecture (15+5 min)</option>
+            <option value="poster">Poster</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="hero__cta" style="margin-top: var(--space-8)">
+        <button type="submit" class="btn btn--primary btn--large">Submit Registration</button>
+      </div>
+      <div class="form-message" hidden style="margin-top:var(--space-4)"></div>
+    </form>
+  </main>
+  <script src="./js/forms.js"></script>
+</body>
+</html>

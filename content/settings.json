@@ -1,0 +1,65 @@
+{
+  "$schema": "./settings-schema.json",
+  "_comment": "Site configuration - editable via /admin",
+  "theme": {
+    "logoColor": "#5f8dd3",
+    "accentColor": "#3b82f6"
+  },
+  "backgrounds": {
+    "_comment": "Theme-aware background map. Keys MUST match data-bg values in HTML: hero, about, wg, grants",
+    "dark": {
+    "_comment": "Dark theme backgrounds (milestone 4 assets).",
+    "hero":
+        "./images/pea_root_cap.webp",
+
+      "about": "./images/micrasterias_cos_488_1_day_post_label.webp",
+
+      "wg": "./images/cover_art_pea_root_apex.webp",
+      "grants": "./images/cyrotmium_root_20x.jpg",
+      "activities" : "./images/arabidopsis root stained with pectin probe.png"
+    },
+    "light": {
+      "_comment": "Light theme backgrounds (milestone 4 assets).",
+      "hero": "./images/linum_stem_20x.webp",
+      "about": "./images/sambucus_nigra_elderbery.webp",
+      "wg": "./images/toluidine_blue_cassava.webp",
+      "grants": "./images/cyrotmium_root2_40x.jpg"
+    },
+    "_legacyFlat": {
+      "_comment": "Back-compat for older code paths.",
+      "hero": "../images/pea_root_cap.webp",
+      "about": "../images/micrasterias_cos_488_1_day_post_label.webp",
+      "wg": "../images/cover_art_pea_root_apex.webp",
+      "workingGroups": "../images/cover_art_pea_root_apex.webp",
+      "grants": "../images/arabidopsis_root_stained_with_pectin_probe.webp"
+    }
+  },
+  "meta": {
+    "siteTitle": "PlantWallK · COST Action CA24116",
+    "siteDescription": "Multidisciplinary consortium to accelerate plant cell wall knowledge"
+  },
+  "backgroundCanvas": {
+    "_comment": "Maps section IDs to background keys. Keys must exist in backgrounds.dark/light",
+    "sections": {
+      "home": "hero",
+      "learn-more": "about",
+      "working-groups": "wg",
+      "leadership": "wg",
+      "participating": "about",
+      "grants-calls": "grants",
+      "activities": "grants",
+      "news": "grants",
+      "join": "hero",
+      "credits": "about"
+    }
+  },
+  "themeOverlays": {
+    "_comment": "Optional knobs consumed by CSS vars; keep subtle for readability.",
+    "dark": {
+      "noiseOpacity": 0.05
+    },
+    "light": {
+      "noiseOpacity": 0.02
+    }
+  }
+}
