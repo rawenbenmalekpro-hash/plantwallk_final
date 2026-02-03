@@ -871,7 +871,8 @@
                     <div class="glass-card" style="margin-top:var(--space-4)">
                       <h4 style="margin-bottom:var(--space-3)">Workshop offer form</h4>
 
-                      <form id="workshop-offer-form">
+<form id="workshop-offer-form" action="submit.php" method="POST">
+  <input type="hidden" name="form_type" value="Workshop Offer">
                         <div class="form-grid">
                           <label>
                             <span>Organiser name</span>
