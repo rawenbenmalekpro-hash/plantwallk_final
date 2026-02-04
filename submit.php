@@ -1,72 +1,76 @@
 <?php
-// submit.php - Form Handler
-// Saves data to 'registrations_2026.csv'
+// submit.php - Registration Handler
+// 1. Saves data to 'registrations_2026.csv'
+// 2. Saves full abstracts to 'abstracts/' folder
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $file = 'registrations_2026.csv';
+    $csvFile = 'registrations_2026.csv';
+    $abstractsDir = 'abstracts';
 
-    // Open file in append mode
-    $handle = fopen($file, 'a');
-
-    // Create headers if file is new
-    if (filesize($file) == 0) {
-        // Add BOM for Excel UTF-8 compatibility
-        fputs($handle, chr(0xEF) . chr(0xBB) . chr(0xBF));
-        fputcsv($handle, array('Date', 'Form Type', 'Name', 'Institution', 'Email', 'Details'), ";");
+    // Create the directory for abstracts if it doesn't exist
+    if (!is_dir($abstractsDir)) {
+        mkdir($abstractsDir, 0755, true);
     }
 
-    // 1. Common Data
+    // Open CSV in append mode
+    $handle = fopen($csvFile, 'a');
+
+    // Create headers if file is new
+    if (filesize($csvFile) == 0) {
+        // Add BOM for Excel UTF-8 compatibility
+        fputs($handle, chr(0xEF) . chr(0xBB) . chr(0xBF));
+        // Note the new column: 'Abstract File'
+        fputcsv($handle, array('Date', 'Form Type', 'Name', 'Institution', 'Email', 'Abstract File', 'Details'), ";");
+    }
+
+    // --- Capture Data ---
     $date = date('Y-m-d H:i:s');
     $formType = $_POST['form_type'] ?? 'General';
     $inst = $_POST['institution'] ?? $_POST['affiliation'] ?? '';
     $email = $_POST['email'] ?? '';
 
-    // 2. Name Logic (Handle both Registration and Workshop forms)
+    // Name Logic
     $firstName = $_POST['firstName'] ?? '';
     $surname = $_POST['surname'] ?? '';
     $name = trim("$firstName $surname");
     
     if (empty($name)) {
-        // Fallback for Workshop form which uses 'organiser_name'
-        $name = $_POST['organiser_name'] ?? $_POST['name'] ?? '';
+        $name = $_POST['organiser_name'] ?? $_POST['name'] ?? 'Unknown_User';
     }
 
-    // 3. Dynamic Details (Capture everything else)
-    $details = [];
+    // --- Abstract File Handling ---
+    $abstractFilename = "None"; // Default if no abstract
+    
+    if (!empty($_POST['abstract'])) {
+        // Create a safe filename: Name_Timestamp.txt
+        $safeName = preg_replace('/[^a-zA-Z0-9_-]/', '', str_replace(' ', '_', $name));
+        $timestamp = date('Ymd_His');
+        $abstractFilename = "{$safeName}_{$timestamp}.txt";
+        
+        // Prepare content for the text file
+        $fullContent = "Name: $name\nDate: $date\nEmail: $email\nTitle: " . ($_POST['title'] ?? '') . "\n\n=== ABSTRACT ===\n\n" . $_POST['abstract'];
+        
+        // Save the file
+        file_put_contents("$abstractsDir/$abstractFilename", $fullContent);
+    }
 
-    // Registration Fields
-    if (!empty($_POST['yri_status'])) $details[] = "YRI Status: " . ($_POST['yri_status'] == 'true' ? 'Yes' : 'No');
+    // --- Other Details for CSV ---
+    $details = [];
+    if (!empty($_POST['yri_status'])) $details[] = "YRI: " . ($_POST['yri_status'] == 'true' ? 'Yes' : 'No');
     if (!empty($_POST['is_member']))  $details[] = "Member: " . ($_POST['is_member'] == 'true' ? 'Yes' : 'No');
     if (!empty($_POST['role']))       $details[] = "Role: " . $_POST['role'];
-    if (!empty($_POST['type']))       $details[] = "Preference/Format: " . $_POST['type'];
+    if (!empty($_POST['type']))       $details[] = "Format: " . $_POST['type'];
     if (!empty($_POST['presence']))   $details[] = "Presence: " . $_POST['presence'];
     if (!empty($_POST['title']))      $details[] = "Title: " . $_POST['title'];
     
-    // Workshop Fields
-    if (!empty($_POST['location']))      $details[] = "Location: " . $_POST['location'];
-    if (!empty($_POST['topic']))         $details[] = "Topic: " . $_POST['topic'];
-    if (!empty($_POST['duration_days'])) $details[] = "Duration: " . $_POST['duration_days'] . " days";
-
-    // Handle Abstract / Description (Clean up newlines for CSV)
-    if (!empty($_POST['abstract'])) {
-        $cleanAbstract = str_replace(["\r", "\n", ";"], " ", $_POST['abstract']);
-        $details[] = "Abstract: " . substr($cleanAbstract, 0, 100) . "... (see full text)"; 
-        // Note: We truncate abstract in CSV summary to keep it readable, 
-        // but you might want to save the full abstract to a separate file or database later.
-    }
-    if (!empty($_POST['description'])) {
-         $cleanDesc = str_replace(["\r", "\n", ";"], " ", $_POST['description']);
-         $details[] = "Description: " . $cleanDesc;
-    }
-
-    // Convert details array to string
+    // Flatten details for one cell
     $detailsString = implode(" | ", $details);
 
-    // 4. Write to CSV
-    fputcsv($handle, array($date, $formType, $name, $inst, $email, $detailsString), ";");
+    // --- Write to CSV ---
+    // We add the $abstractFilename to the CSV so you know which file corresponds to which row
+    fputcsv($handle, array($date, $formType, $name, $inst, $email, $abstractFilename, $detailsString), ";");
     fclose($handle);
 
-    // Response for JS
     echo "OK";
 }
 ?>
