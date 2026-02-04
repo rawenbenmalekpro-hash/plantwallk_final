@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"> <head>
-  <title>Prague Meeting Registration - PlantWallK</title>
+  <title>First PlantWallK Meeting Registration</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/themes.css">
   <script>
@@ -8,14 +8,14 @@
     const savedTheme = localStorage.getItem('plantwallk-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', savedTheme);
   })();
-</script>
+  </script>
 </head>
 <body>
   <main class="content-surface content-surface--wide" style="margin: 4rem auto;">
-    <h2>Prague Meeting Registration</h2>
+    <h2>First PlantWallK Meeting Registration</h2>
     
-<form id="workshop-offer-form" action="submit.php" method="POST">
-  <input type="hidden" name="form_type" value="Workshop Offer">
+    <form id="prague-form" onsubmit="submitForm(event, 'prague')">
+      <input type="hidden" name="form_type" value="Inscription Prague">
       
       <div class="form-grid form-grid--2-col">
         <label class="form-group">
@@ -68,6 +68,7 @@
       <div class="form-message" hidden style="margin-top:var(--space-4)"></div>
     </form>
   </main>
+  
   <script src="./js/forms.js"></script>
 </body>
 </html>

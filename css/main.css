@@ -883,7 +883,10 @@ details[open] .ledger-strip__icon::after { transform: rotate(90deg); } /* Minus 
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px; height: 28px;
+  /* Increased size to fit "WG1" */
+  width: 44px; 
+  height: 44px;
+  min-width: 44px; /* Prevents shrinking */
   border-radius: 50%;
   font-weight: 700;
   font-size: 0.85rem;

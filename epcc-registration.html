@@ -3,28 +3,6 @@
   <title>EPCC Registration - PlantWallK</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/themes.css">
-  <style>
-    .epcc-header {
-      background: url('./images/micrasterias_cos_488_1_day_post_label.webp') center/cover;
-      height: 220px;
-      border-radius: var(--radius-xl);
-      margin-bottom: var(--space-8);
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-    }
-    .epcc-header::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.9) 100%);
-    }
-    .epcc-title {
-      position: absolute; bottom: var(--space-6); left: var(--space-6); z-index: 2;
-      color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-      margin: 0;
-    }
-  </style>
-
   <script>
   (function() {
     const savedTheme = localStorage.getItem('plantwallk-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -35,12 +13,16 @@
 <body>
   <main class="content-surface content-surface--wide" style="margin: 4rem auto;">
     
-    <div class="epcc-header">
-      <h1 class="epcc-title">European Plant Cytoskeletal Club<br><span style="font-size:0.6em; opacity:0.9; font-weight:400">Satellite Meeting · May 26–27</span></h1>
-    </div>
+    <h2 style="margin-bottom: var(--space-6);">
+      European Plant Cytoskeletal Club<br>
+      <span style="font-size:0.65em; font-weight:400; color:var(--text-secondary); display:block; margin-top:0.2em;">
+        Satellite Meeting · May 26–27
+      </span>
+    </h2>
 
-<form id="workshop-offer-form" action="submit.php" method="POST">
-  <input type="hidden" name="form_type" value="Workshop Offer">
+    <form id="epcc-form" onsubmit="submitForm(event, 'epcc')">
+      <input type="hidden" name="form_type" value="Inscription EPCC">
+      
       <div class="form-grid form-grid--2-col">
         <label class="form-group">
           <span class="form-label">First Name</span>
@@ -110,6 +92,7 @@
       <div class="form-message" hidden style="margin-top:var(--space-4)"></div>
     </form>
   </main>
+  
   <script src="./js/forms.js"></script>
 </body>
 </html>
