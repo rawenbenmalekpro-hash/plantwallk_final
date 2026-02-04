@@ -1,4 +1,4 @@
-/* js/forms.js — Gestionnaire de formulaire & Fond d'écran */
+/* js/forms.js — Form Handler & Background Wallpaper */
 
 async function submitForm(event, type) {
   event.preventDefault();
@@ -6,41 +6,41 @@ async function submitForm(event, type) {
   const btn = form.querySelector('button[type="submit"]');
   const msg = form.querySelector('.form-message');
   
-  // 1. Verrouiller l'interface pendant l'envoi
+  // 1. Lock UI during submission
   const originalText = btn.innerText;
-  btn.innerText = 'Envoi en cours...';
+  btn.innerText = 'Sending...';
   btn.disabled = true;
   msg.hidden = true;
   msg.className = 'form-message'; 
 
-  // 2. Récupérer les données (FormData gère tout automatiquement)
+  // 2. Retrieve data (FormData handles everything automatically)
   const formData = new FormData(form);
 
-  // 3. Envoyer à submit.php (qui est sur le même serveur)
+  // 3. Send to submit.php (hosted on the same server)
   try {
     const response = await fetch('submit.php', {
       method: 'POST',
       body: formData
     });
 
-    if (!response.ok) throw new Error('Erreur serveur');
+    if (!response.ok) throw new Error('Server error');
 
-    // 4. Succès
-    msg.innerText = 'Inscription réussie ! Nous avons bien reçu votre résumé.';
+    // 4. Success
+    msg.innerText = 'Registration successful! We have received your abstract.';
     msg.classList.add('success');
     msg.hidden = false;
     form.reset();
     
-    // Remettre le bouton après 3 secondes
+    // Reset button after 3 seconds
     setTimeout(() => {
         btn.innerText = originalText;
         btn.disabled = false;
     }, 3000);
 
   } catch (error) {
-    // 5. Erreur
+    // 5. Error
     console.error(error);
-    msg.innerText = 'Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter.';
+    msg.innerText = 'Error sending form. Please try again or contact us.';
     msg.classList.add('error');
     msg.hidden = false;
     btn.innerText = originalText;
@@ -48,9 +48,9 @@ async function submitForm(event, type) {
   }
 }
 
-/* ======== Gestion du Diaporama (Background Cycle) ======== */
+/* ======== Slideshow Management (Background Cycle) ======== */
 function initBackgroundCycle() {
-  // 1. Liste des images
+  // 1. Image list
   const images = [
     './images/Jan%20Martinek%201.jpg',
     './images/Jan%20Martinek%202.jpg',
@@ -59,15 +59,15 @@ function initBackgroundCycle() {
     './images/Petra%20Cifrova%202.jpg'
   ];
 
-  // 2. Créer le conteneur du fond
+  // 2. Create background container
   const container = document.createElement('div');
   container.id = 'bg-cycler';
   Object.assign(container.style, {
     position: 'fixed', inset: 0, zIndex: -1,
-    background: '#020617' // Fond noir par défaut
+    background: '#020617' // Default black background
   });
 
-  // 3. Fonction pour créer une "couche" d'image
+  // 3. Helper function to create an image layer
   const createLayer = (src, initialOpacity) => {
     const layer = document.createElement('div');
     Object.assign(layer.style, {
@@ -76,12 +76,12 @@ function initBackgroundCycle() {
       backgroundImage: `url('${src}')`,
       opacity: initialOpacity,
       transition: 'opacity 1.5s ease-in-out',
-      filter: 'brightness(0.5)' // Assombrit légèrement pour lire le texte
+      filter: 'brightness(0.5)' // Slightly darken to make text readable
     });
     return layer;
   };
 
-  // 4. Initialisation des calques
+  // 4. Initialize layers
   let currentIndex = 0;
   let layerBack = createLayer(images[0], 1); // Visible
   let layerFront = createLayer(images[1], 0); // Invisible
@@ -89,18 +89,18 @@ function initBackgroundCycle() {
   container.appendChild(layerBack);
   container.appendChild(layerFront);
   
-  // Insérer au tout début du body
+  // Insert at the very beginning of the body
   document.body.prepend(container);
 
-  // 5. Lancer le cycle (toutes les 5 secondes)
+  // 5. Start cycle (every 5 seconds)
   setInterval(() => {
     const nextIndex = (currentIndex + 1) % images.length;
     
-    // Charger la nouvelle image sur le calque avant
+    // Load new image onto the front layer
     layerFront.style.backgroundImage = `url('${images[nextIndex]}')`;
     layerFront.style.opacity = 1;
 
-    // Une fois la transition finie (1.5s), on échange les rôles
+    // Once transition is finished (1.5s), swap roles
     setTimeout(() => {
       layerBack.style.backgroundImage = layerFront.style.backgroundImage;
       layerFront.style.opacity = 0;
@@ -109,5 +109,5 @@ function initBackgroundCycle() {
   }, 5000);
 }
 
-// Lancer le script quand la page est chargée
+// Run script when DOM is loaded
 document.addEventListener('DOMContentLoaded', initBackgroundCycle);
